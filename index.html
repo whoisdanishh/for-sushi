@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <link href="https://fonts.cdnfonts.com/css/ethereal" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/caviar-dreams" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #000;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 10%;
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Shared background style based on the confession part */
+        .shared-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516589174184-c6852661448c?auto=format&fit=crop&q=80') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+        #section1 {
+            font-family: 'Ethereal', serif;
+        }
+        #section2 {
+            font-family: 'Caviar Dreams', sans-serif;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        #section3 {
+            font-family: 'Caviar Dreams', sans-serif;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        p {
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+        .buttons {
+            margin-top: 40px;
+        }
+        button {
+            padding: 15px 40px;
+            margin: 10px 20px;
+            font-size: 1.2em;
+            border: 2px solid #d4af37;
+            background: transparent;
+            color: #d4af37;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: #111;
+            padding: 40px;
+            border: 1px solid #d4af37;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 0.4s ease-out;
+            border-radius: 15px;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.9);}
+            to {opacity: 1; transform: scale(1);}
+        }
+        .close {
+            color: #d4af37;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: -20px;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body onclick="startMusic()">
+    <canvas id="particles"></canvas>
+
+    <div class="content-wrapper">
+        <section id="section1" class="shared-bg">
+            <div>
+                <h1>Hi Sushi,</h1>
+                <p>On this special Valentine’s Day, I wanted to create something extraordinary just for you. I know you’ve had a reason to hate this week. I know I made you angry the other day and I’m sorry for missing Rose Day, but the truth is, I’ve been planning this for a long time.</p>
+
+                <p>I know things feel confusing right now and you might only see me as a friend, but love doesn’t always have to be there at the very start. It’s often something that grows beautifully when two people simply decide to try. You might not feel that spark right this second, but I’m asking you to trust me.</p>
+
+                <p>Don't worry about having all the answers yet, just give us a chance. Say 'YES' and let’s see where this journey takes us. I promise to make it worth the leap..</p>
+
+SCROLL DOWN.</p>
+            </div>
+        </section>
+
+        <section id="section2" class="shared-bg">
+            <div>
+                <h1>My Confession</h1>
+                <p>I may not be your first love, but I want to be the one who shows you what real love can be,the kind that heals the hurts you've carried for too long. Let me prove to you that love doesn't have to come with pain or betrayal, it can arrive quietly, without demands, and stay because it chooses to, even on the days when doubt creeps in. A love that listens without judgment, that builds a safe space where your heart can finally breathe easy, free from the walls you've had to put up to protect it. The kind that holds you through your worst moments, reminds you of your strength when family words cut deep or dreams feel out of reach, and celebrates the incredible woman you are, even when the world forgets to. A love so patient and steadfast, it makes you wonder why you ever thought you didn't deserve it,and helps you believe again, one small step at a time.</p>
+                <p>I know trust doesn't come easy after what you've been through, with relationships that took more than they gave and a family that hasn't always seen your worth. You've fought so hard to protect your feelings, your emotions, your peace and I respect that more than anything. I don't want to rush you or promise perfection, I just want to be your steady anchor, the one you can call when life's chaos hits and say, 'I need my boyfriend' for comfort, knowing I'll be there with open arms, no questions asked. Let me love you in ways that feel like coming home after a storm, not loud or fleeting, but gentle, enduring, and true. The kind that supports your dreams without holding you back, that stands by you through the taunts and the tears, and reminds you every day that you're worthy of everything good.</p>
+                <p>Maybe we're too young to say forever right now, but if you let me in, I swear I'll give you all my love, loyalty, and everything I have to earn your trust and build something real. I'll be your peace, your supporter, the one who helps you chase those goals and heal those wounds. so what do you say???...</p>
+            </div>
+        </section>
+
+        <section id="section3" class="shared-bg">
+            <div>
+                <h1>Will you be my valentine?</h1>
+                <div class="buttons">
+                    <button onclick="handleYes()">Yes</button>
+                    <button onclick="showPopup(0)">No</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="popup0" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(0)">×</span>
+            <p>Wait, did you misclick? You meant "Yes", right?</p>
+            <button onclick="handleYesFromPopup()">Yes!</button>
+            <button onclick="showPopup(1)">Still No</button>
+        </div>
+    </div>
+
+    <div id="popup1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(1)">×</span>
+            <p>Oh come on, 'No'? That's just your defense mechanism talking! Think about the free hugs.</p>
+            <button onclick="handleYesFromPopup()">Okay, Yes!</button>
+            <button onclick="showPopup(2)">I'm stubborn</button>
+        </div>
+    </div>
+
+    <div id="popup2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(2)">×</span>
+            <p>But I've already planned our future (hypothetically)! Don't break my heart like this.</p>
+            <button onclick="handleYesFromPopup()">Fine, Yes!</button>
+            <button onclick="showPopup(3)">Still No</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(3)">×</span>
+            <p>I'll be your anchor, remember? Anchors don't let you drift away!</p>
+            <button onclick="handleYesFromPopup()">Yes, My Anchor</button>
+            <button onclick="showPopup(4)">Let me drift</button>
+        </div>
+    </div>
+
+    <div id="popup4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(4)">×</span>
+            <p>Are you really going to keep clicking 'No'? My finger is getting tired of showing these popups.</p>
+            <button onclick="handleYesFromPopup()">Stop, Yes!</button>
+            <button onclick="showPopup(5)">One more No</button>
+        </div>
+    </div>
+
+    <div id="popup5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(5)">×</span>
+            <p>You're playing hard to get, aren't you? I like a challenge, but please?</p>
+            <button onclick="handleYesFromPopup()">Yes, You Win!</button>
+            <button onclick="showPopup(6)">Nope</button>
+        </div>
+    </div>
+
+    <div id="popup6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(6)">×</span>
+            <p>If you say Yes now, I'll owe you a massive treat. Deal?</p>
+            <button onclick="handleYesFromPopup()">Deal, Yes!</button>
+            <button onclick="showPopup(7)">No Deal</button>
+        </div>
+    </div>
+
+    <div id="popup7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup(7)">×</span>
+            <p>Alright, you win this round. But deep down, I know you're smiling. Refresh the page if your heart changes its mind! 😘</p>
+            <button onclick="closeAllPopups()">Okay, Close</button>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="https://archive.org/download/arctic-monkeys-am_202501/12.%20I%20Wanna%20Be%20Yours.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('bg-music');
+        let musicStarted = false;
+
+        function startMusic() {
+            if (!musicStarted) {
+                audio.play().catch(e => console.log("Playback failed:", e));
+                musicStarted = true;
+            }
+        }
+
+        // Keep music playing on scroll as well (extra safeguard)
+        window.addEventListener('scroll', startMusic, { once: true });
+
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+
+        const popups = ['popup0', 'popup1', 'popup2', 'popup3', 'popup4', 'popup5', 'popup6', 'popup7'];
+
+        function showPopup(index) {
+            closeAllPopups();
+            const popup = document.getElementById(popups[index]);
+            if (popup) popup.style.display = 'flex';
+        }
+
+        function closePopup(index) {
+            document.getElementById(popups[index]).style.display = 'none';
+        }
+
+        function closeAllPopups() {
+            popups.forEach(id => {
+                const el = document.getElementById(id);
+                if(el) el.style.display = 'none';
+            });
+        }
+
+        function handleYes() {
+            alert('Yay! You said yes! I can\'t wait to start this journey with you. ❤️');
+            closeAllPopups();
+        }
+
+        function handleYesFromPopup() {
+            closeAllPopups();
+            handleYes();
+        }
+
+        // Particles
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let width, height, hearts = [];
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Heart {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = height + Math.random() * 100;
+                this.size = Math.random() * 10 + 5;
+                this.speed = Math.random() * 1 + 0.5;
+                this.opacity = Math.random() * 0.5 + 0.3;
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotateSpeed = Math.random() * 0.02 - 0.01;
+            }
+            update() {
+                this.y -= this.speed;
+                this.rotation += this.rotateSpeed;
+                if (this.y < -20) this.reset();
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(0.75 * this.size, -0.5 * this.size, this.size, 0.33 * this.size, 0, this.size);
+                ctx.bezierCurveTo(-this.size, 0.33 * this.size, -0.75 * this.size, -0.5 * this.size, 0, 0);
+                ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) hearts.push(new Heart());
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            hearts.forEach(h => { h.update(); h.draw(); });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
